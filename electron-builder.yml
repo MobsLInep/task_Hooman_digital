@@ -1,0 +1,24 @@
+appId: com.task1.app
+productName: task1
+directories:
+  buildResources: resources
+  output: release
+files:
+  - out/**
+  - package.json
+  - '!**/*.map'
+  - '!**/node_modules/pdfjs-dist/web/**'
+  - '!**/node_modules/pdfjs-dist/build/**'
+  - '!**/node_modules/pdfjs-dist/types/**'
+  - '!**/node_modules/pdfjs-dist/image_decoders/**'
+asarUnpack:
+  - '**/node_modules/better-sqlite3/**'
+linux:
+  target:
+    - AppImage
+  category: Utility
+  maintainer: shreyansh
+  icon: resources/icon.png
+  syncDesktopName: true
+  synopsis: Electron + React + TypeScript desktop app
+npmRebuild: true

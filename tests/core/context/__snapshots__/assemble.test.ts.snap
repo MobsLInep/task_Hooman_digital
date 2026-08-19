@@ -1,0 +1,132 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`degradation ladder > records a stable report snapshot 1`] = `
+{
+  "excluded": [
+    {
+      "id": "turn-4",
+      "reason": "replaced_by_summary",
+    },
+    {
+      "id": "chunk-2",
+      "reason": "no_paragraph_fits",
+    },
+    {
+      "id": "chunk-3",
+      "reason": "no_paragraph_fits",
+    },
+  ],
+  "headroom": 199,
+  "ladder": [
+    {
+      "action": "dropped 1 whole item(s) that did not fit the tier allocation",
+      "itemIds": [
+        "turn-5",
+      ],
+      "step": 1,
+      "tier": 2,
+    },
+    {
+      "action": "replaced 1 oldest verbatim turn(s) with their summary",
+      "itemIds": [
+        "turn-4",
+      ],
+      "step": 3,
+      "tier": 2,
+    },
+    {
+      "action": "dropped 3 whole item(s) that did not fit the tier allocation",
+      "itemIds": [
+        "chunk-1",
+        "chunk-2",
+        "chunk-3",
+      ],
+      "step": 1,
+      "tier": 3,
+    },
+    {
+      "action": "truncated at a paragraph boundary to fit 112 tokens",
+      "itemIds": [
+        "chunk-1",
+      ],
+      "step": 2,
+      "tier": 3,
+    },
+  ],
+  "tiers": [
+    {
+      "allocated": 302,
+      "cap": 302,
+      "cascadedIn": 0,
+      "cascadedOut": 0,
+      "excluded": [],
+      "included": [
+        "sys",
+        "__untrusted_content_policy__",
+      ],
+      "tier": 0,
+      "used": 302,
+    },
+    {
+      "allocated": 225,
+      "cap": 225,
+      "cascadedIn": 0,
+      "cascadedOut": 225,
+      "excluded": [],
+      "included": [],
+      "tier": 1,
+      "used": 0,
+    },
+    {
+      "allocated": 619,
+      "cap": 394,
+      "cascadedIn": 225,
+      "cascadedOut": 84,
+      "excluded": [
+        "turn-4",
+      ],
+      "included": [
+        "turn-0",
+        "turn-1",
+        "turn-2",
+        "turn-3",
+        "sum-4",
+        "turn-5",
+      ],
+      "tier": 2,
+      "used": 535,
+    },
+    {
+      "allocated": 422,
+      "cap": 338,
+      "cascadedIn": 84,
+      "cascadedOut": 38,
+      "excluded": [
+        "chunk-2",
+        "chunk-3",
+      ],
+      "included": [
+        "chunk-0",
+        "chunk-1",
+      ],
+      "tier": 3,
+      "used": 384,
+    },
+    {
+      "allocated": 207,
+      "cap": 169,
+      "cascadedIn": 38,
+      "cascadedOut": 197,
+      "excluded": [],
+      "included": [
+        "sum-4",
+        "sum-5",
+      ],
+      "tier": 4,
+      "used": 10,
+    },
+  ],
+  "total": 1301,
+  "usable": 1500,
+}
+`;
